@@ -42,7 +42,7 @@ Push this repository to GitHub.
 3.  Under **Build and deployment**, select **GitHub Actions** as the Source.
 
 ### 3. Automatic Deployment
-The workflow file located at `.github/workflows/deploy.yml` will automatically build and deploy the application whenever you push to the `main` branch.
+The workflow file located at `.github/workflows/deployment.yml` will automatically build and deploy the application whenever you push to the `main` branch.
 
 - The build artifact is created from `d3-force-app/dist`.
 - The `vite.config.ts` is configured with `base: './'` to ensure assets load correctly on GitHub Pages.
