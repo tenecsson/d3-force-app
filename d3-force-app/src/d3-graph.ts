@@ -83,7 +83,13 @@ export function renderGraph(container: HTMLElement, data: GraphData) {
         .call(d3.drag<any, Node>()
             .on('start', dragstarted)
             .on('drag', dragged)
-            .on('end', dragended));
+            .on('end', dragended))
+        .on('mouseover', function () {
+            d3.select(this).classed('highlighted', true);
+        })
+        .on('mouseout', function () {
+            d3.select(this).classed('highlighted', false);
+        });
 
     node.append('circle')
         .attr('r', 5)
